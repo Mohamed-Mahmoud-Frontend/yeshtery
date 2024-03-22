@@ -1,4 +1,3 @@
-import "./CartSidebar.css";
 
 // eslint-disable-next-line react/prop-types
 const CartSidebar = ({
@@ -25,7 +24,7 @@ const CartSidebar = ({
         {cartItems.length > 0 ? (
           <ul>
             {cartItems.map((item) => (
-              <div key={item.id}>
+              <div  className="product__cart" key={item._id}>
                 <li>
                   <img
                     src={item.image}

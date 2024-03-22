@@ -9,7 +9,6 @@ export default function Carousel() {
         axios.get('https://dummyjson.com/products/39')
             .then(response => {
                 setProducts(response.data);
-                console.log(response.data);
             })
             .catch(error => {
                 console.error('Error fetching data: ', error);

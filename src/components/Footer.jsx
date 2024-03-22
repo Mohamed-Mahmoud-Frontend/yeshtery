@@ -3,6 +3,10 @@ import inst from "../assets/Group 1433.svg";
 import twitter from "../assets/Group 1434.svg";
 import Ln from "../assets/Group 1435.svg";
 import logo from "../assets/logo (2).svg";
+import cash from "../assets/cash.png";
+import right_footer from "../assets/right_footer.svg";
+import visa from "../assets/Group 1437.png";
+import master from "../assets/Group 1438.png";
 
 const Footer = () => {
   return (
@@ -70,25 +74,46 @@ const Footer = () => {
             <div>
               <ul className="ul_right">
                 <li>
-                  <img src={face} alt="" />
+                  <img src={face} alt=""  />
                   /YESHTERY
                 </li>
                 <li>
-                  <img src={inst} alt="" />
+                  <img src={inst} alt=""  />
                   /YESHTERY
                 </li>{" "}
                 <li>
-                  <img src={twitter} alt="" />
+                  <img src={twitter} alt=""  />
                   /YESHTERY
                 </li>
                 <li>
-                <img src={Ln} alt="" />
+                <img src={Ln} alt=""  />
                 /YESHTERY</li>
               </ul>
             </div>
           </div>
         </div>
-      </div>
+
+        </div>
+
+
+        <div className="divider"></div>
+        <div className="line__last">
+
+        <div>
+        <p>© 2021 yeshtery, all rights reserved.</p>
+        </div>
+        <div className="cash">
+      <img src={cash} alt="" />
+      <img src={visa} alt="" />
+      <img src={master} alt="" />
+        </div>
+
+        <div className="Powered">
+        <p>Powered By <span> <img src={right_footer} alt="" /></span></p>
+        </div>
+
+
+        </div>
     </footer>
   );
 };

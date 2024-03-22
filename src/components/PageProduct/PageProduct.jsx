@@ -11,12 +11,12 @@ import cartNav from "../../assets/cartNav.svg";
 import contact from "../../assets/contact.svg";
 import palce from "../../assets/palce.svg";
 import cart from "../../assets/cart.svg";
-import Carousel from "../MultipleItems";
+import Carousel from "../Carousel/MultipleItems";
 
 import "../../App.css";
 import { Side } from "../side";
 
-const NavBar = () => {
+const PageProduct = () => {
   const [cartCount, setCartCount] = useState(0);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [products, setProducts] = useState([]);
@@ -330,4 +330,4 @@ const NavBar = () => {
 );
 };
 
-export default NavBar;
+export default PageProduct;

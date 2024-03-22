@@ -62,19 +62,19 @@ export function Side({
               <Link className="nav-link" onClick={toggleSidebar}>
                 <div className="cart-icon">
                 <img src={cartNav} alt="" />
-                {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
+                {cartCount > 0 ? <span className="cart-count">{cartCount}</span> : <span className="cart-count">0</span> }
                 </div>
                 Cart
               </Link>
               </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/wishlist">
+              <Link className="nav-link" to="/">
                 <img src={Wishlist} alt="" />
                 Wishlist
               </Link>
             </li>
             <li className="nav-item">
-            <Link className="nav-link" to="/login">
+            <Link className="nav-link" to="/">
                 <img src={LoginImg} alt="" />
                 Login
                 </Link>
