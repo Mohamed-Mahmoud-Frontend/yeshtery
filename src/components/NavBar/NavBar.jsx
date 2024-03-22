@@ -1,7 +1,6 @@
 
-import  { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { IoMdSearch } from "react-icons/io";
+import  { useState, useEffect, Suspense } from "react";
+
 import axios from "axios";
 import ReactStars from "react-rating-stars-component";
 import logo from "../../assets/brand-logo-yellow.svg";
@@ -83,7 +82,7 @@ const NavBar = () => {
   };
 
   return (
-    <div>
+    <div className="Main__page">
  <Side   logo={logo} contact={contact} cart={cart} palce={palce} LogoAdidas={LogoAdidas} toggleSidebar={toggleSidebar} cartNav={cartNav} cartCount={cartCount} Wishlist={Wishlist} LoginImg={LoginImg} isSidebarOpen={isSidebarOpen} handleRemoveItem={handleRemoveItem} cartItems={cartItems}  />
         <div>
       <div className="product" key={products.id}>
@@ -93,8 +92,10 @@ const NavBar = () => {
 
 
         <div className="Carousel__style">
-        <Carousel />
-          </div>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Carousel />
+        </Suspense>
+      </div>
         </div>
         <div className="Details__product">
           <img src={LogoAdidas} alt="product image" />
@@ -312,7 +313,7 @@ const NavBar = () => {
               className="size__"
             >
               <div className="buttons__count">
-                <                  button className="button__count" onClick={decrementCount}>-</button>
+                <button className="button__count" onClick={decrementCount}>-</button>
                 <span className="count">{count}</span>
                 <button className="button__count" onClick={incrementCount}>+</button>
               </div>

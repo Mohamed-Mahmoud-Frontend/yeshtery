@@ -17,7 +17,7 @@ export function Side({
   cartItems
 }) {
   return <div>
-    <div className="line__Top h-20 ">
+    <div className="line__Top  ">
     <div className="line__top-right">
     <svg xmlns="http://www.w3.org/2000/svg" className="max-w-6 h-6" width={35} fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />

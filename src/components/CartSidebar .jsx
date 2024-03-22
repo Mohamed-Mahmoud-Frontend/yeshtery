@@ -96,7 +96,7 @@ const CartSidebar = ({
                 </div>
                 <div className="buttons__cart">
                   <button className="Pickup-Button ">Review Cart</button>
-                  <button className="add__cart-Button">
+                  <button className="ء Pickup-Button">
                     Complete Checkout
                   </button>
                 </div>
