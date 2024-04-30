@@ -14,15 +14,23 @@ const CartSidebar = ({
   return (
     <div className={`sidebar ${isOpen ? "open" : ""}`}>
       <div className="sidebar-header">
-        <h2>Cart</h2>
+       
         <div className="p-header-cart">
           <p onClick={toggleSidebar}>x</p>
         </div>
+        
         <button className="close-btn" onClick={toggleSidebar}></button>
+        
       </div>
+       <div className="sidebar-header_text">
+
+        <h2 >My Cart</h2>
+        </div>
+      
       <div className="sidebar-content">
         {cartItems.length > 0 ? (
           <ul>
+            <p className="Summary">Cart Summary</p>
             {cartItems.map((item) => (
               <div  className="product__cart" key={item._id}>
                 <li className="product__cart_li">
@@ -47,7 +55,7 @@ const CartSidebar = ({
                     <span
                       style={{
                         color: "#1D1D1B",
-                        fontWeight: "600",
+                        fontWeight: "800",
                       }}
                     >
                       {item.title}
@@ -63,7 +71,9 @@ const CartSidebar = ({
                     <span
                       style={{
                         color: "#542E90",
-                        fontWeight: "600",
+                        fontWeight: "800",
+                        fontFamily: "Montserrat",
+
                       }}
                     >
                       {item.price} LE
