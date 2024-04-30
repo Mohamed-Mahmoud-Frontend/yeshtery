@@ -2,7 +2,6 @@
 import  { useState, useEffect, Suspense } from "react";
 
 import axios from "axios";
-import ReactStars from "react-rating-stars-component";
 import logo from "../../assets/brand-logo-yellow.svg";
 import Wishlist from "../../assets/Wishlist.svg";
 import LoginImg from "../../assets/Login.svg";
@@ -11,8 +10,11 @@ import cartNav from "../../assets/cartNav.svg";
 import contact from "../../assets/contact.svg";
 import palce from "../../assets/palce.svg";
 import cart from "../../assets/cart.svg";
+import dic from "../../assets/dec.svg";
+import inc from "../../assets/inc.svg";
 import Carousel from "../Carousel/MultipleItems";
-
+import star from "../../assets/star.svg";
+import star__fill from "../../assets/star__fill.svg";
 import "../../App.css";
 import { Side } from "../side";
 
@@ -102,17 +104,14 @@ const PageProduct = () => {
           <strong>{products.description}</strong>
           <span>{products.title}</span>
           <div className="star__rating">
-            <ReactStars
-              value={products.rating}
-              count={5}
-              size={24}
-              activeColor="#ffd700"
-              inactiveColor="#cccccc"
-              edit={false}
-            />
+          <img src={star} alt="" />
+             <img src={star} alt="" />
+             <img src={star} alt="" />
+             <img src={star} alt="" />
+             <img src={star__fill} alt="" />
             <p className="rating">
-              {products.rating} of 5{" "}
-              <span className="stock">{products.stock}</span>
+              {products.rating} of 5
+              <span className="stock">22 Rates</span>
             </p>
           </div>
           <span
@@ -122,6 +121,8 @@ const PageProduct = () => {
               display: "flex",
               alignItems: "center",
               gap: "15px",
+              fontWeight:"600"
+
             }}
           >
             {products.price} LE{" "}
@@ -129,6 +130,7 @@ const PageProduct = () => {
               style={{
                 color: "#A7A9AC",
                 fontSize: "20px",
+                fontWeight:"600"
               }}
             >
               {products.price} LE
@@ -140,7 +142,7 @@ const PageProduct = () => {
                 justifyContent: "center",
                 background: "#FFF200",
                 color: "#000000",
-                fontSize: "15px",
+                fontSize: "14px",
                 paddingInline: "5px",
               }}
             >
@@ -165,12 +167,11 @@ const PageProduct = () => {
               className="size__"
             >
               <p
+
+className="size"
+
                 style={{
-                  width: "50px",
-                  height: "50px",
-                  borderRadius: "50%",
-                  border: "1px solid #D9D9D9",
-                  color: "#542E90",
+                
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -180,43 +181,38 @@ const PageProduct = () => {
                 Small
               </p>
               <p
+              className="size"
                 style={{
-                  width: "50px",
-                  height: "50px",
-                  borderRadius: "50%",
-                  border: "1px solid #D9D9D9",
-                  color: "#542E90",
+                
+                 
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                   fontSize: "10px",
+                  
                 }}
               >
                 Medium
               </p>
               <p
+              className="sizeLarge"
                 style={{
-                  background: "#ECECEC",
-                  width: "50px",
-                  height: "50px",
-                  borderRadius: "50%",
-                  border: "1px solid #D9D9D9",
-                  color: "#542E90",
+            
+
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                   fontSize: "10px",
+
                 }}
               >
                 Large
               </p>
               <p
+                            className="size"
+
                 style={{
-                  width: "50px",
-                  height: "50px",
-                  borderRadius: "50%",
-                  border: "1px solid #D9D9D9",
-                  color: "#542E90",
+                
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -226,12 +222,10 @@ const PageProduct = () => {
                 X Large
               </p>
               <p
+                            className="size"
+
                 style={{
-                  width: "50px",
-                  height: "50px",
-                  borderRadius: "50%",
-                  border: "1px solid #D9D9D9",
-                  color: "#542E90",
+                 
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -313,9 +307,16 @@ const PageProduct = () => {
               className="size__"
             >
               <div className="buttons__count">
-                <button className="button__count" onClick={decrementCount}>-</button>
+                <button className="button__count" onClick={decrementCount}>
+                  
+                <img src={inc} alt="" />
+
+                  </button>
                 <span className="count">{count}</span>
-                <button className="button__count" onClick={incrementCount}>+</button>
+                <button className="button__count" onClick={incrementCount}>
+                <img src={dic} alt="" />
+
+                  </button>
               </div>
             </div>
             <div className="buttons__cart">

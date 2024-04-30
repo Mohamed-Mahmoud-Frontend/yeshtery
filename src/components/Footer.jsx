@@ -7,7 +7,7 @@ import cash from "../assets/cash.png";
 import right_footer from "../assets/right_footer.svg";
 import visa from "../assets/Group 1437.png";
 import master from "../assets/Group 1438.png";
-
+import GroupFooter from "../assets/Group 1431.svg"
 const Footer = () => {
   return (
     <footer className="footer">
@@ -19,7 +19,7 @@ const Footer = () => {
           <img src={logo} />
           <ul>
             <li
-              style={{ display: "flex", flexDirection: "column", gap: "5px" }}
+              style={{ display: "flex", flexDirection: "column", gap: "5px" , marginTop:"20px" }}
             >
               <p style={{ marginBottom: "10px" }}>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
@@ -54,11 +54,19 @@ const Footer = () => {
           <p style={{ color: "#fff", fontSize: "18px" }}>
             Subscribe to our newsletter
           </p>
+          <div className="parent__input">
+
           <input
-            className="input_footer"
+            className="input_footer "
             type="text"
             placeholder="Enter Your Mail"
-          />
+            />
+            <button className="button_footer">
+              Subscribe
+              <img src={GroupFooter} alt="" />
+              
+              </button>
+            </div>
           <div className="section__right">
             <div>
               <ul className="ul_left">
@@ -68,6 +76,7 @@ const Footer = () => {
                 <li>Terms & Conditions</li>
                 <li>Privacy Policy </li>
                 <li>Sell With Us </li>
+                <li>Shipping And Returns </li>
               </ul>
             </div>
             <div className="line"></div>
@@ -109,7 +118,8 @@ const Footer = () => {
         </div>
 
         <div className="Powered">
-        <p>Powered By <span> <img src={right_footer} alt="" /></span></p>
+        <p>Powered By 
+          <img src={right_footer} alt="" /></p>
         </div>
 
 

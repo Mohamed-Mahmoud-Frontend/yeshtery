@@ -1,35 +1,30 @@
 import CartSidebar from "./CartSidebar ";
 import { Link } from "react-router-dom";
 import { IoMdSearch } from "react-icons/io";
-export function Side({
-  logo,
-  contact,
-  cart,
-  palce,
-  LogoAdidas,
-  toggleSidebar,
-  cartNav,
-  cartCount,
-  Wishlist,
-  LoginImg,
-  isSidebarOpen,
-  handleRemoveItem,
-  cartItems
+import arrow from "../assets/arrow.svg"
+import arrowRight from "../assets/arrowRight.svg"
+import menu from "../assets/menu.svg"
+import Logo from "../assets/Logo.svg"
+import searchIcon from "../assets/searchIcon.svg"
+
+// eslint-disable-next-line react/prop-types
+export function Side({logo,contact,cart,palce,LogoAdidas,toggleSidebar,cartNav,cartCount,Wishlist,LoginImg,isSidebarOpen,handleRemoveItem,cartItems,
 }) {
-  return <div>
-    <div className="line__Top  ">
-    <div className="line__top-right">
-    <svg xmlns="http://www.w3.org/2000/svg" className="max-w-6 h-6" width={35} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-          </svg>
-          <img src={logo} alt="" />
-          </div>
+  return (
+    <div>
+      <div className="line__Top  ">
+        <div className="line__top-right" >
+          <img  src={menu} className="menuIcon" alt="" />
+          <img className="Logo" src={Logo} alt="" />
+        </div>
 
         <div>
-          <p>
+          <p className="sideTop">
+            <img src={arrow} width="10px" alt="" />
             Valentine’s Day Offers! Buy Two Get One Free <b> Shop Now</b>
-            </p>
+            <img src={arrowRight} alt="" />
           <span></span>
+          </p>
         </div>
 
         <div className="line__Top-icons">
@@ -51,22 +46,31 @@ export function Side({
       <nav className="navbar">
         <div className="container">
           <form className="search-form">
-            <input className="search-input" type="search" placeholder="Search" aria-label="Search" />
-              <IoMdSearch className="icon__search" />
-              </form>
+            <input
+              className="search-input"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <img src={searchIcon} alt="" className="icon__search" />
+          </form>
           <Link className="logo" to="/">
-          <img src={LogoAdidas} alt="" />
+            <img src={LogoAdidas} alt="" />
           </Link>
           <ul className="nav-links">
             <li className="nav-item">
               <Link className="nav-link" onClick={toggleSidebar}>
                 <div className="cart-icon">
-                <img src={cartNav} alt="" />
-                {cartCount > 0 ? <span className="cart-count">{cartCount}</span> : <span className="cart-count">0</span> }
+                  <img src={cartNav} alt="" />
+                  {cartCount > 0 ? (
+                    <span className="cart-count">{cartCount}</span>
+                  ) : (
+                    <span className="cart-count">0</span>
+                  )}
                 </div>
                 Cart
               </Link>
-              </li>
+            </li>
             <li className="nav-item">
               <Link className="nav-link" to="/">
                 <img src={Wishlist} alt="" />
@@ -74,32 +78,63 @@ export function Side({
               </Link>
             </li>
             <li className="nav-item">
-            <Link className="nav-link" to="/">
+              <Link className="nav-link" to="/">
                 <img src={LoginImg} alt="" />
                 Login
-                </Link>
+              </Link>
             </li>
-            </ul>
+          </ul>
         </div>
       </nav>
 
-      <CartSidebar isOpen={isSidebarOpen} handleRemoveItem={handleRemoveItem} toggleSidebar={toggleSidebar} cartItems={cartItems} />
+      <CartSidebar
+        isOpen={isSidebarOpen}
+        handleRemoveItem={handleRemoveItem}
+        toggleSidebar={toggleSidebar}
+        cartItems={cartItems}
+      />
 
       <div className="menu">
-        <div className="menu-item">Men</div>
-        <div className="menu-item">Women</div>
-        <div className="menu-item">Kids</div>
+        <div className="menu-item best-sellers">Men</div>
+        <div className="menu-item best-sellers">Women</div>
+        <div className="menu-item best-sellers">Kids</div>
         <div className="menu-item best-sellers">Best Sellers</div>
-        <div className="menu-item new-arrivals">New Arrivals</div>
-        <div className="menu-item offer">Offer
+        <div className="menu-item best-sellers">New Arrivals</div>
+        <div className="menu-item offer">Offer</div>
+      </div>
 
-        </div>
-        </div>
+      <div>
+        <p className="url__product" >
+          <p style={{textDecoration:"underline"}}>
+            
+          Men 
+          </p>
+          
+          / 
+          <p style={{textDecoration:"underline"}}>
 
-        <div>
-        <p className="url__product">
-        Men / Clothing / Tops / Adidas / Adidas Black T-Shirt
+          Clothing 
+          </p>
+          
+          /
+          <p style={{textDecoration:"underline"}}>
+
+           Tops
+           </p>
+
+           /
+           <p style={{textDecoration:"underline"}}>
+
+            Adidas
+            </p>
+
+            /
+          <p>
+
+           Adidas Black T-Shirt
+          </p>
         </p>
-        </div>
-        </div>;
+      </div>
+    </div>
+  );
 }

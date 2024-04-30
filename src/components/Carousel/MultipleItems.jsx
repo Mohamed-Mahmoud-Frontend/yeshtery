@@ -1,6 +1,8 @@
-import  { useEffect, useState } from "react";
+import {useState , useEffect } from "react";
 import Slider from "react-slick";
 import axios from "axios";
+import arrow from "../../assets/arrow.svg";
+import arrowRight from "../../assets/arrowRight.svg";
 
 export default function Carousel() {
     const [products, setProducts] = useState({ images: [] });
@@ -15,13 +17,15 @@ export default function Carousel() {
             });
     }, []);
 
+
     var settings = {
         dots: true,
-        infinite: false,
+        infinite: true,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
         initialSlide: 0,
+
         responsive: [
             {
                 breakpoint: 1024,
