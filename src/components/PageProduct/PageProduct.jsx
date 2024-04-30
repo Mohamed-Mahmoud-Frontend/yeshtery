@@ -90,7 +90,7 @@ const PageProduct = () => {
       <div className="product" key={products.id}>
         <div className="product__images">
 
-        <img src={image} alt="product image" />
+        <img src={image}  alt="product image" />
 
 
         <div className="Carousel__style">
@@ -100,7 +100,7 @@ const PageProduct = () => {
       </div>
         </div>
         <div className="Details__product">
-          <img src={LogoAdidas} alt="product image" />
+          <img src={LogoAdidas} style={{width: "60px",height: "40px"}} alt="product image" />
           <strong>{products.description}</strong>
           <span>{products.title}</span>
           <div className="star__rating">
@@ -321,7 +321,7 @@ className="size"
             </div>
             <div className="buttons__cart">
               <button className="add__cart-Button" onClick={addToCart}>Add To Cart</button>
-              <button className="Pickup-Button">Pickup From Store</button>
+              <button className="Pickup-Button2">Pickup From Store</button>
             </div>
           </div>
         </div>

@@ -25,7 +25,7 @@ const CartSidebar = ({
           <ul>
             {cartItems.map((item) => (
               <div  className="product__cart" key={item._id}>
-                <li>
+                <li className="product__cart_li">
                   <img
                     src={item.image}
                     style={{
@@ -69,12 +69,14 @@ const CartSidebar = ({
                       {item.price} LE
                     </span>
                   </div>
+                  
                   <div
                     style={{
                       display: "flex",
                       gap: "5px",
                     }}
                   >
+                    
                     <button
                       className="remove__button"
                       onClick={() => handleRemoveItem(item)}
@@ -83,6 +85,7 @@ const CartSidebar = ({
                     </button>
                   </div>
                 </li>
+
                 <div
                   style={{
                     textAlign: "center",
@@ -95,7 +98,7 @@ const CartSidebar = ({
                 </div>
                 <div className="buttons__cart">
                   <button className="Pickup-Button ">Review Cart</button>
-                  <button className="ء Pickup-Button">
+                  <button className="Pickup-Button2">
                     Complete Checkout
                   </button>
                 </div>
